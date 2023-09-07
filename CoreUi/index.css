@@ -115,19 +115,19 @@ img{
     display: flex;
 }
 
-.badge-profile{
+/* .badge-profile{
     font-size: 4rem;
     font-weight: bolder;
     color: green;
     position: absolute;
     bottom: -1.9rem;
     
-}
+} */
 
-.badge-profile span{
+/* .badge-profile span{
     position: relative;
     left: 1.8rem;
-}
+} */
 
 .menu{
     display: none;
@@ -228,7 +228,7 @@ ul li a{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    height: 50%;
+    height: 40%;
     padding: 2rem 3rem;
 }
 .cards{
@@ -245,6 +245,18 @@ ul li a{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+}
+.numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+.numbers .number{
+    margin-top: 10px;
+}
+p{
+    font-size: 20px;
+    text-align:center;
 }
 .one{
     background-color: rgb(27, 42, 148);
@@ -263,28 +275,25 @@ ul li a{
     background-color: rgb(74, 116, 32);
     color: white;
 }
+h3{
+    font-size: 30px;
+    font-weight: 600;
+}
 
-
-
-
-@media(max-width: 600px){
+@media(max-width: 768px){
     .cards-container{
         grid-template-columns: 1fr;
-        padding: 0.3rem 1rem;
+        /* padding: 3rem 3rem; */
+        margin-right: 6rem;  
+    }
+    .cards{
+        padding: 30px;
     }
     .sidebar{
         display: none;
     }
-    .contents{
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
+
+    .nav-notification-icons{
+        display: none;
     }
-/* 
-    body{
-        
-        grid-template-columns: 1fr;
-        width: 100%;
-        padding: 2rem 3rem;
-    } */
 }
