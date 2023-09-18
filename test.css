@@ -1,0 +1,44 @@
+/* Styling for desktop */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-menu li {
+    margin-right: 20px;
+  }
+  
+  /* Styling for mobile */
+  @media screen and (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 60px; /* Adjust to your needs */
+      left: 0;
+      background-color: #333;
+      width: 100%;
+    }
+  
+    .nav-menu.active {
+      display: block;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+    }
+  
+    .nav-menu li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
