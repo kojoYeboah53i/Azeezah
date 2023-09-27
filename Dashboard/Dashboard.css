@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 /* Root Variables */
 :root {
-  --color-primary: #7380ec;
+  --color-primary: #9c9403;
   --color-danger: #ff7782;
   --color-success: #41f1b6;
   --color-warning: #ffbb55;
@@ -435,8 +435,8 @@ main .recent-orders a{
     background-color: var(--color-success);
 }
 .right .sales-analytics .add-product{
-    background-color:transparent;
-    border: 2px dashed var(--color-primary);
+    background-color:var(--color-white);
+    border: 2px solid var(--color-primary);
     color: var(--color-primary);
     display: flex;
     align-items: center;
@@ -454,6 +454,78 @@ main .recent-orders a{
 .right .sales-analytics .add-product div h3{
     font-weight: 600;
 }
+
+/* CARD CONTAINERS */
+.cards-container{
+    grid-area: container;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    height: 30%;
+    padding: 2rem 3rem;
+    z-index: -1;
+    
+}
+
+.cards{
+    background: #fff;
+    display:grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+.cards:hover{
+    box-shadow: none;
+}
+.cards .numbers-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.container-numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+.container-numbers .card-number{
+    margin-top: 10px;
+}
+.card-text{
+    font-size: 20px;
+    text-align:center;
+    color: white;
+}
+.one{
+    background-color: rgb(27, 42, 148);
+    color: white;
+}
+.two{
+    background-color: rgb(106, 96, 32);
+    color: white;
+
+}
+.three{
+    background-color: rgb(215, 77, 61);
+    color: white;
+}
+.four{
+    background-color: rgb(74, 116, 32);
+    color: white;
+}
+.new-card-number{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
 /* MEDIA QUERY FOR TABLET*/
 @media screen and (max-width: 1200px){
     .container{
@@ -477,6 +549,7 @@ main .recent-orders a{
     grid-template-columns: 1fr;
     gap: 0;
    }
+
    main .recent-orders{
     width: 94%;
     position: absolute;
@@ -484,6 +557,7 @@ main .recent-orders a{
     transform: translateX(-50%);
     margin: 2rem 0 0 8.8rem;
    }
+
    main .recent-orders table{
     width: 81vw;
    }
@@ -496,6 +570,10 @@ main .recent-orders a{
    main table tbody tr td:first-child{
     display:none;
    }
+   .cards-container{
+    grid-template-columns: 1fr;
+    margin-bottom: 8rem;
+   }
 }
 /* MEDIA QUERY FOR MOBILE*/
 @media screen and (max-width: 768px){
@@ -505,20 +583,20 @@ main .recent-orders a{
    } 
    aside{
     position: fixed;
-    left: -100%;
+    top: -100%;
     background: var(--color-white);
-    width: 18rem;
+    width: 100%;
     z-index: 3;
     box-shadow: 1rem 3rem 4rem var(--color-light);
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
-    animation: showMenu 400ms ease forwards;
+    animation: showMenu 800ms ease forwards;
    }
 
    @keyframes showMenu{
     to{
-        left: 0;
+        top: 0;
     }
    }
    aside .logo{
@@ -559,6 +637,9 @@ main .recent-orders a{
     width: 94%;
     margin: 0 auto 4rem;
    }
+   .recent-updates{
+    margin-top: 0;
+   }
    .right .top{
     position: fixed;
     top: 0;
@@ -590,6 +671,21 @@ main .recent-orders a{
    }
    .right .top button span{
     font-size: 2rem;
+   }
+
+   .cards-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+    align-items: center;
+    margin-bottom: 16rem;
+    justify-content: center;
+    align-items: center;
+
+   }
+   .cards{
+    width: 110%;
+    height:110%;
    }
 }
 
