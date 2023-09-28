@@ -8,6 +8,7 @@
       rel="stylesheet">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="./Dashboard.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -15,7 +16,7 @@
             <div class="top">
                 <div class="logo">
                 <img src="./images/logo.png" alt="logo">
-                <h2> EGA<span class="danger">TOR</span></h2>
+                <h2><span class="danger">DIV</span></h2>
                 </div>
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">
@@ -90,7 +91,8 @@
         <main>
             <h1>Dashboard</h1>
             <div class="date">
-                <input type="date">
+              <label for="date">date</label>
+                <input type="date" id="date">
             </div>
             <div class="insights">
                 <!-- SALES -->
@@ -181,7 +183,10 @@
                       </div>
                     </div>
                     <p class="card-text">Users</p>
-                </div>
+                    <span class="material-symbols-outlined arrow-down delete-card">
+                      delete
+                    </span>
+                    </div>
         
                 <div class="cards two">
                     <div class="numbers-icon">
@@ -206,7 +211,10 @@
                       </div>
                     </div>
                     <p class="card-text">Conversion Rate</p>
-                </div>
+                    <span class="material-symbols-outlined arrow-down delete-card">
+                      delete
+                    </span>
+                    </div>
         
                 <div class="cards three">
                     <div class="numbers-icon">
@@ -232,7 +240,11 @@
                       </div>
                     </div>
                     <p class="card-text">Session</p>
-                </div>
+                    <span class="material-symbols-outlined arrow-down delete-card">
+                      delete
+                    </span>
+                    </div>
+
            
         
                 <div class="cards four">
@@ -258,9 +270,12 @@
                       </div>
                     </div>
                     <p class="card-text">Conversion Rate</p>
+                    <span class="material-symbols-outlined arrow-down delete-card">
+                      delete
+                    </span>
                 </div>
-                    </div>
-
+                
+              </div>
 
             <!-- RECENT ORDERS -->
             <div class="recent-orders">
@@ -436,5 +451,6 @@
     </div>
     <script src="./orders.js"></script>
     <script src="./Dashboard.js"></script>
+    <script src="./js/delete.js"></script>
 </body>
 </html>

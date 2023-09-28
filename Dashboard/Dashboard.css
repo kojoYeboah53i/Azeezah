@@ -123,19 +123,30 @@ aside{
 
 }
 aside .top{
-    /* background-color: white; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 1.4rem;
+    width: 100%;
 }
 aside .logo{
     display: flex;
     gap: 0.8rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.4rem;
+
+}
+aside .logo span{
+    display: none;
 }
 aside .logo img{
-   width: 2rem;
-   height: 2rem; 
+    height: 4rem;
+    width: 7.6rem;
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-2);
+
 }
 aside .close{
     display: none;
@@ -213,6 +224,9 @@ main .date{
 main .date input[type='date']{
     background-color: transparent;
     color: var(--color-dark);
+}
+main .date label{
+    display: none;
 }
 main .insights{
     display: grid;
@@ -465,6 +479,7 @@ main .recent-orders a{
     height: 30%;
     padding: 2rem 3rem;
     z-index: -1;
+    transition: all 600ms ease;
     
 }
 
@@ -479,7 +494,21 @@ main .recent-orders a{
     border-radius: var(--card-border-radius);
     margin-top: 1rem;
     box-shadow: var(--box-shadow);
-    transition: all 300ms ease;
+    transition: all 600ms ease;
+    position: relative;
+}
+.fade-out{
+    transition: all 1000ms ease;
+
+}
+.delete-card{
+    font-size: 1.3rem;
+    padding: 0.4rem;
+    margin: 1rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
 }
 .cards:hover{
     box-shadow: none;
