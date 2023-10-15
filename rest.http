@@ -1,0 +1,35 @@
+
+###
+POST http://localhost:9222/shop/v1/customer
+Content-Type: application/json
+
+{
+    "name" : "Isaac Yeboah",
+    "city" : "Accra",
+    "token" :"admin1234sfdsfsfd454632122345%^&*£"
+}
+
+###
+GET http://localhost:9222/shop/v1/products
+###
+GET http://localhost:9222/shop/v1/customers
+
+###
+GET http://localhost:9222/shop/v1/orderWithC/1
+
+###
+POST http://localhost:9222/shop/v1/orderWithCustomerId
+Content-Type: application/json
+
+{
+    "customer_id" : 12
+}
+
+
+###
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "auth" : true
+}
