@@ -6,7 +6,6 @@ console.log('card element')
 console.log(cardDelete)
 cardDelete.forEach( btn =>{
 
-
 btn.addEventListener('click', (e) => {
     e.preventDefault()
     alert('deleting..')
@@ -19,4 +18,20 @@ btn.addEventListener('click', (e) => {
 
 
 })
+
+const deleteMainCards = document.querySelectorAll('.delete-main-cards');
+
+deleteMainCards.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('deleting..');
+        let parent = e.target.parentElement;
+        parent.classList.add('fade-out');
+        console.log(parent);
+        parent.style.display = 'none';
+        parent.remove();
+    });
+
+    
+});
 
