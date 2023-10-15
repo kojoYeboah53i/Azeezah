@@ -3,11 +3,12 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-    return knex.schema.createTable('Teams', function (table) {
+    return knex.schema.createTable('teams', function (table) {
         table.increments('id').primary();
                 table.string('name').notNullable();
                 table.string('badge');
                 table.integer('matchesPlayed');
+                table.integer('totalPoints');
                 table.timestamps(true, true);
     })
 };

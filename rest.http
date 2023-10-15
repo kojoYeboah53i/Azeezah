@@ -12,7 +12,7 @@ Content-Type: application/json
 ###
 GET http://localhost:9222/shop/v1/products
 ###
-GET http://localhost:9222/shop/v1/customers
+GET http://localhost:5584/api/league
 
 ###
 GET http://localhost:9222/shop/v1/orderWithC/1
