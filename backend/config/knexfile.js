@@ -6,16 +6,20 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'mysql',
     connection: {
-      filename: './dev.sqlite3'
+      user: 'root',
+      password: '', //
+      port: 3306,
+      database: 'uefa_league',
+      host: '127.0.0.1'
     },
-      seeds: {
+    migrations: {
+      directory: './migrations'
+    },
+    seeds: {
       directory: './seed'
-      
-    },
-    useNullAsDefault: true, // Required for SQLite
-
+    }
   },
 
 
