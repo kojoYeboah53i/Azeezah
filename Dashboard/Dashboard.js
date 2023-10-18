@@ -22,7 +22,7 @@ themeToggler.addEventListener('click', () => {
 })
 // code for filling in order in table
 Orders.forEach(order => {
-    const tr = document.createElement('tr');
+    const tr = document.createElement('tr')/;
     const trContent = `
                     <td>${order.productName}</td>
                     <td>${order.productNumber}</td>
