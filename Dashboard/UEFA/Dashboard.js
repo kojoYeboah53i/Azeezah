@@ -1,3 +1,8 @@
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(function(res){
+   console.log(res.json()) 
+})
+
 const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
